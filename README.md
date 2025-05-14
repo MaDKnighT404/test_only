@@ -11,7 +11,7 @@ https://only-test-work.netlify.app/
 1. Клонировать репозиторий:
 
 ```bash
-git clone https://github.com/your-repo/historical-dates.git
+git clone https://github.com/MaDKnighT404/test_only.git
 ```
 
 2. Установить зависимости:
