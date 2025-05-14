@@ -1,0 +1,64 @@
+.circle-navigation-controls {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+
+  &__counter {
+    font-size: 16px;
+
+    @media (width <= 568px) {
+      font-size: 14px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    left: 0;
+    gap: 20px;
+
+    @media (width <= 568px) {
+      gap: 8px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgb(66 86 122 / 50%);
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &--mobile {
+      padding: 6px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media (width <= 568px) {
+    align-self: flex-start;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+}

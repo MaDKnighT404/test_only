@@ -1,0 +1,128 @@
+.event-slider {
+  position: relative;
+  margin: 30px 0;
+  width: 100%;
+
+  &-content {
+    position: relative;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 20px;
+
+    @media (width <= 568px) {
+      padding: 0;
+    }
+  }
+
+  &__year {
+    margin-bottom: 12px;
+    color: #3877ee;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: "Bebas Neue", sans-serif;
+
+    @media (width <= 568px) {
+      align-self: start;
+      font-size: 16px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 1.5;
+
+    @media (width <= 568px) {
+      font-size: 14px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__pagination {
+    display: none;
+
+    @media (width <= 568px) {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: -40px !important;
+      left: 0;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__bullet {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #c7cdd9;
+    width: 8px;
+    height: 8px;
+
+    &--active {
+      background-color: #42567a;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &-button__wrapper {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    &--left {
+      left: -75px;
+    }
+
+    &--right {
+      right: -77px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 30%);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 11px;
+    width: 40px;
+    height: 40px;
+    color: #3877ee;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  @media (width <= 568px) {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    height: 150px;
+  }
+}
+
+.swiper-slide {
+  width: 60%;
+}
