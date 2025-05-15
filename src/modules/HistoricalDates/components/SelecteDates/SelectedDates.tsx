@@ -1,13 +1,9 @@
-import React from "react";
-import { Period } from "../../types";
+import { useChangeSelectedDates } from "./hooks/useChangeSelectedDates";
+import type { Period } from "../../types";
+
 import "./SelectedDates.scss";
 
-import { useChangeSelectedDates } from "./hooks/useChangeSelectedDates";
-interface SelectedDatesProps {
-  activePeriod: Period;
-}
-
-const SelectedDates: React.FC<SelectedDatesProps> = ({ activePeriod }) => {
+const SelectedDates = ({ activePeriod }: { activePeriod: Period }) => {
   const { displayStartYear, displayEndYear } = useChangeSelectedDates(activePeriod);
 
   return (

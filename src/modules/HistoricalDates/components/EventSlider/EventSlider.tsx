@@ -2,20 +2,22 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
+import Chevron from "../../../../shared/components/Chevron";
+import { useAnimationFadeSlider } from "./hooks/useAnimationFadeSlider";
+import type { Event } from "../../types";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./EventSlider.scss";
-import { Event } from "../../types";
-import Chevron from "../../../../shared/components/Chevron";
-import { useAnimationFadeSlider } from "./hooks/useAnimationFadeSlider";
 
-interface EventSliderProps {
+const EventSlider = ({
+  events,
+  mobileTitleRef,
+}: {
   events: Event[];
   mobileTitleRef?: React.RefObject<HTMLDivElement>;
-}
-
-const EventSlider: React.FC<EventSliderProps> = ({ events, mobileTitleRef }) => {
+}) => {
   const { displayedEvents, sliderRef } = useAnimationFadeSlider({ events, mobileTitleRef });
 
   return (

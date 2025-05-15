@@ -1,4 +1,4 @@
-import { Period } from "../types";
+import type { Period } from "../types";
 
 export const periods: Period[] = [
   {

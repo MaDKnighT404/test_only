@@ -1,23 +1,24 @@
 import React from "react";
-import "./CircleNavigation.scss";
-import { Period } from "../../types";
 import { useCircleNavigation } from "./hooks/useCircleNavigation";
+import type { Period } from "../../types";
+
+import "./CircleNavigation.scss";
 
 interface CircleNavigationProps {
   periods: Period[];
   activePeriodIndex: number;
-  onPeriodChange: (index: number) => void;
   isMobile: boolean;
   mobileTitleRef?: React.RefObject<HTMLDivElement>;
+  onPeriodChange: (index: number) => void;
 }
 
 const CircleNavigation: React.FC<CircleNavigationProps> = ({
   periods,
   activePeriodIndex,
-  onPeriodChange,
   isMobile,
   mobileTitleRef,
-}) => {
+  onPeriodChange,
+}: CircleNavigationProps) => {
   const { circleRef, dotsRef } = useCircleNavigation({
     periods,
     activePeriodIndex,

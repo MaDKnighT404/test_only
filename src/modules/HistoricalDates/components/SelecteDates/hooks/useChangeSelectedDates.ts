@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { Period } from "../../../types";
+
+import type { Period } from "../../../types";
 
 export const useChangeSelectedDates = (activePeriod: Period) => {
   const startYearRef = useRef({ value: activePeriod.startYear });

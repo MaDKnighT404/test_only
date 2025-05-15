@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.scss";
 import HistoricalDates from "../modules/HistoricalDates/HistoricalDates";
 
-const App: React.FC = () => {
+import "./App.scss";
+
+const App = () => {
   return (
     <main className="app">
       <HistoricalDates />

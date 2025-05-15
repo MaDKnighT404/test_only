@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { UseCircleNavigationProps, UseCircleNavigationReturn } from "../../../types";
-import { Event } from "../../../types";
 
-interface UseAnimationFadeSliderProps {
+import type { Event } from "../../../types";
+
+export const useAnimationFadeSlider = ({
+  events,
+  mobileTitleRef,
+}: {
   events: Event[];
   mobileTitleRef?: React.RefObject<HTMLDivElement>;
-}
-
-export const useAnimationFadeSlider = ({ events, mobileTitleRef }: UseAnimationFadeSliderProps) => {
+}) => {
   const [displayedEvents, setDisplayedEvents] = useState<Event[]>(events);
   const sliderRef = useRef<HTMLDivElement>(null);
 

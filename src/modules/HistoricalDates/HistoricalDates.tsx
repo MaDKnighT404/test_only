@@ -1,14 +1,16 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 
-import "./HistoricalDates.scss";
 import CircleNavigation from "./components/CircleNavigation/CircleNavigation";
 import EventSlider from "./components/EventSlider/EventSlider";
-import { periods } from "./data/events";
 import SelectedDates from "./components/SelecteDates/SelectedDates";
 import NavigationControls from "./components/NavigationControls/NavigationControls";
-import useIsMobile from "../../shared/hooks/useIsMobile";
 
-const HistoricalDates: React.FC = () => {
+import { useIsMobile } from "../../shared/hooks/useIsMobile";
+import { periods } from "./data/events";
+
+import "./HistoricalDates.scss";
+
+const HistoricalDates = () => {
   const isMobile = useIsMobile();
   const [activePeriodIndex, setActivePeriodIndex] = useState(0);
   const activePeriod = periods[activePeriodIndex];

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { UseCircleNavigationProps, UseCircleNavigationReturn } from "../../../types";
+import type { UseCircleNavigationProps, UseCircleNavigationReturn } from "../../../types";
 
 export const useCircleNavigation = ({
   periods,

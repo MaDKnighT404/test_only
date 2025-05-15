@@ -1,20 +1,21 @@
 import Chevron from "../../../../shared/components/Chevron";
-import { Period } from "../../types";
+import type { Period } from "../../types";
+
 import "./NavigationControls.scss";
 
 interface NavigationControlsProps {
   periods: Period[];
   activePeriod: Period;
-  onPeriodChange: (index: number) => void;
   isMobile: boolean;
+  onPeriodChange: (index: number) => void;
 }
 
-const NavigationControls: React.FC<NavigationControlsProps> = ({
+const NavigationControls = ({
   periods,
   activePeriod,
-  onPeriodChange,
   isMobile,
-}) => {
+  onPeriodChange,
+}: NavigationControlsProps) => {
   const activePeriodIndex = periods.findIndex((period) => period.id === activePeriod.id);
 
   const isFirstPeriod = activePeriodIndex === 0;
