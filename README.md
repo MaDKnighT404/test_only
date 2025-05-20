@@ -14,13 +14,19 @@ https://only-test-work.netlify.app/
 git clone https://github.com/MaDKnighT404/test_only.git
 ```
 
-2. Установить зависимости:
+2. Перейти в папку проекта
+
+```bash
+cd test_only
+```
+
+3. Установить зависимости:
 
 ```bash
 npm install
 ```
 
-3. Запустить проект локально:
+4. Запустить проект локально:
 
 ```bash
 npm start
